@@ -11,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoFooterComponent implements OnInit {
   filterButtons: FilterButton[] = [
-    { type: Filter.All, label: 'All', isActive: true },
-    { type: Filter.Active, label: 'Active', isActive: false },
-    { type: Filter.Completed, label: 'Completed', isActive: false },
+    { type: Filter.All, label: 'Tất cả', isActive: true },
+    { type: Filter.Active, label: 'Chưa làm', isActive: false },
+    { type: Filter.Completed, label: 'Đã làm', isActive: false },
   ];
 
   length = 0;
