@@ -1,0 +1,19 @@
+.icon-wrapper {
+  width: 40px;
+  line-height: 45px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  font-size: 40px;
+  color: rgb(0, 255, 42);
+  background: #333;
+  border-radius: 50px;
+  transition: 200ms all ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(0, 163, 49);
+  }
+}
+
+app-todo-iput {
+  width: 100%;
+}

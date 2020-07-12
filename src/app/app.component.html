@@ -1,0 +1,28 @@
+<div class="topnav">
+  <a class="active" href="#">Demo Angular</a>
+  <a>Hà Việt Tùng</a>
+</div>
+<div class="wrapper d-flex flex-column align-items-center w-100">
+  <h1 class="title">ToDos</h1>
+  <h3>Nhật ký ghi chép công việc hằng ngày của bạn !</h3>
+  <br />
+  <div class="row justify-content-center w-100">
+    <div class="todo-wrapper p-0 d-flex flex-column col-md-6 col-sm-8">
+      <app-todo-header></app-todo-header>
+      <app-todo-list></app-todo-list>
+      <app-todo-footer *ngIf="hasTodo$ | async"></app-todo-footer>
+    </div>
+  </div>
+  <small class="instruction text-center">
+    <h3>Hướng dẫn sử dụng</h3>
+    <br />
+    <em
+      >Nhập công việc rồi Enter để thêm mới công việc. <br />
+      Di chuột vào công việc sẽ hiện ra 2 biểu tượng Sửa và Xoá công việc
+      <br />Tích vào ô trái công việc để hoàn thành công việc<br />
+      Ấn vào dấu tích xanh để hoàn thành tất cả. <br /> </em
+    ><br /><br />
+    <h4>- Xây dựng dựa trên TodoMVC Project -</h4>
+    <p>Copyright TodoMVC Project</p>
+  </small>
+</div>

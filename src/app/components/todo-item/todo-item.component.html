@@ -1,0 +1,42 @@
+<div
+  class="todo-item d-flex justify-content-between align-items-center"
+  (mouseover)="isHovered = true"
+  (mouseout)="isHovered = false"
+>
+  <div class="todo">
+    <input
+      type="checkbox"
+      class="toggle text-center"
+      [id]="todo.id"
+      [checked]="todo.isCompleted"
+      (change)="changeTodoStatus()"
+    />
+    <label
+      [@fadeStrikeThrough]="todo.isCompleted ? 'completed' : 'active'"
+      [for]="todo.id"
+      >{{ todo.content }}</label
+    >
+  </div>
+
+  <div class="d-flex align-items-center">
+    <span
+      class="icon-wrapper text-center edit"
+      [ngClass]="{ active: isHovered }"
+      [hidden]="todo.isCompleted"
+      title="Sửa"
+    >
+      <i class="eva eva-edit-outline" (click)="isEditing = true"></i>
+    </span>
+    <span
+      class="icon-wrapper text-center"
+      [ngClass]="{ active: isHovered }"
+      title="Xóa"
+    >
+      <i class="eva eva-trash-2-outline" (click)="removeTodo()"></i>
+    </span>
+  </div>
+
+  <form (keyup)="submitEdit($event)" class="edit-form" *ngIf="isEditing">
+    <input [(ngModel)]="todo.content" type="text" name="editTodo" />
+  </form>
+</div>

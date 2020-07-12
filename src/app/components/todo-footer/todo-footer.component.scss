@@ -1,0 +1,44 @@
+.footer {
+  position: relative;
+  height: 40px;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow: 2px 3px;
+  }
+
+  & .filter-btn {
+    outline: none;
+    padding: 3px;
+    border-radius: 0.25rem;
+    transition: 250ms all ease-in-out;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: white;
+    border: 1px solid white;
+
+    &:hover,
+    &.active {
+      background-color: darken($color: #96f7d6, $amount: 0);
+      border-color: lighten($color: #000000, $amount: 0);
+    }
+  }
+
+  & .clear-comleted-btn {
+    visibility: hidden;
+    & .visible {
+      visibility: visible;
+    }
+  }
+
+  & .items-count {
+    padding-left: 10px;
+  }
+}
